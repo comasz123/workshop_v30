@@ -2,18 +2,16 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class KeyboardReader {
-    private Scanner sc = new Scanner(System.in);
+ //   private Scanner sc = new Scanner(System.in);
 
-    // wprowadzilem zmiany
+ //   public void close() {sc.close();}
 
-    public void close() {
-        sc.close();
-    }
-
-    static int readInt(int range) {
+    public int readInt(int range) {
 
         boolean choice = true;
         int result = -1;
+        Scanner sc = new Scanner(System.in);
+        int test = sc.nextInt();
 
         while (choice) {
             try {
@@ -30,11 +28,13 @@ public class KeyboardReader {
             }
 
         }
+        sc.close();
 
         return result;
 
     }
     public String readString() {
+        Scanner sc = new Scanner(System.in);
 
         String result= sc.nextLine();
 
