@@ -40,6 +40,8 @@ public class Main {
                 case EXIT:
                     System.out.println("Koniec na dzisiaj");
                     menu_choice = false;
+                    kr.close();
+
             }
 
 

@@ -6,6 +6,7 @@ public enum MainMenu {
     LOG_USER(5, "Zaloguj użytkownika"),
     NEW_IDS(6, "Uporządkuj indexy (ids)"),
     EXIT(7, "KONIEC");
+  //  DO_NOTHING(11,"NIC");
 
     private int value;
     private String description;
