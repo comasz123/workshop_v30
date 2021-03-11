@@ -4,13 +4,11 @@ import java.util.Scanner;
 public class KeyboardReader {
     private Scanner sc = new Scanner(System.in);
 
-    // wprowadzilem zmiany
-
     public void close() {
         sc.close();
     }
 
-    static int readInt(int range) {
+    public int readInt(int range) {
 
         boolean choice = true;
         int result = -1;

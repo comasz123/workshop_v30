@@ -6,6 +6,8 @@ public class Main {
 
         UserDao.createDBIfNotExist();
 
+        // tu zaszla zmiania
+
         do {
             printMenu();
             KeyboardReader kr = new KeyboardReader();
