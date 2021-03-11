@@ -11,13 +11,14 @@ public class KeyboardReader {
         boolean choice = true;
         int result = -1;
         Scanner sc = new Scanner(System.in);
-        int test = sc.nextInt();
+
 
         while (choice) {
             try {
                 result = sc.nextInt();
                 if (result>0 && result<=range) {
                     choice = false;
+                    sc.next();
                 } else {
                     System.out.println("Podaj liczbę całkowitą pomiędzy 1-"+range);
                 }
