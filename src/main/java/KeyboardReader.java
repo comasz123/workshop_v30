@@ -5,7 +5,7 @@ public class KeyboardReader {
 
     private KeyboardReader(){}
 
-    public static final KeyboardReader kr = new KeyboardReader();
+ //   public static final KeyboardReader kr = new KeyboardReader();
     private static Scanner sc = new Scanner(System.in);
 
 
@@ -34,9 +34,7 @@ public class KeyboardReader {
         return result;
     }
     public static String readString() {
-        String result= sc.nextLine();
-
-        return result;
+        return sc.nextLine();
     }
 
 }
