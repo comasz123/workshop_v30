@@ -2,9 +2,12 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class KeyboardReader {
-     private static final Scanner sc = new Scanner(System.in);
 
-     private KeyboardReader(){}
+    private KeyboardReader(){}
+
+    public static final KeyboardReader kr = new KeyboardReader();
+    private static Scanner sc = new Scanner(System.in);
+
 
     public static void close() {sc.close();}
 

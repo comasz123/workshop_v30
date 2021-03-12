@@ -8,7 +8,7 @@ public class Main {
 
         do {
             printMenu();
-            int i = KeyboardReader.readInt(MainMenu.EXIT.getValue());
+            int i = KeyboardReader.kr.readInt(MainMenu.EXIT.getValue());
             option = MainMenu.createFromInt(i);
 
             switch (option) {
@@ -40,7 +40,7 @@ public class Main {
                 case EXIT:
                     System.out.println("Koniec na dzisiaj");
                     menu_choice = false;
-                    KeyboardReader.close();
+                    KeyboardReader.kr.close();
 
             }
 
