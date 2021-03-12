@@ -6,7 +6,7 @@ public class Main {
 
         UserDao.createDBIfNotExist();
 
-        do {
+        while (menu_choice) {
             printMenu();
             int i = KeyboardReader.readInt(MainMenu.EXIT.getValue());
             option = MainMenu.createFromInt(i);
@@ -41,11 +41,8 @@ public class Main {
                     System.out.println("Koniec na dzisiaj");
                     menu_choice = false;
                     KeyboardReader.close();
-
             }
-
-
-        } while (menu_choice);
+        }
     }
     public static void printMenu() {
         for (MainMenu options : MainMenu.values()) {
