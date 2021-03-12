@@ -2,9 +2,9 @@ import java.sql.*;
 import java.util.Arrays;
 
 public class DBUtil {
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/workshop?useSSL=false&characterEncoding=utf8";
-    private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "RumburaK4040";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/workshop?useSSL=false&characterEncoding=utf8&allowPublicKeyRetrieval=true";
+    private static final String DB_USER = "coderslab";
+    private static final String DB_PASSWORD = "Lama";
 
 
     public static Connection connect() throws SQLException {
@@ -44,7 +44,6 @@ public class DBUtil {
             e.printStackTrace();
         }
     }
-
 
     public static User[] loadUsers(Connection conn, String query, String... columnNames) throws SQLException {
         User[] users = new User[0];

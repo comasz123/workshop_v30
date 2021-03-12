@@ -1,12 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-        boolean menu_choice = true;
+        boolean menuChoice = true;
         MainMenu option;
         MainMenuControl mmc = new MainMenuControl();
 
         UserDao.createDBIfNotExist();
 
-        while (menu_choice) {
+        while (menuChoice) {
             printMenu();
             int i = KeyboardReader.readInt(MainMenu.EXIT.getValue());
             option = MainMenu.createFromInt(i);
@@ -39,7 +39,7 @@ public class Main {
 
                 case EXIT:
                     System.out.println("Koniec na dzisiaj");
-                    menu_choice = false;
+                    menuChoice = false;
                     KeyboardReader.close();
             }
         }

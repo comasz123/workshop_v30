@@ -10,12 +10,12 @@ public class UserDao {
             "UPDATE users SET name = 'newName', email='newEmail' WHERE id=?;";
     public static String SELECT_USER_NAME = "SELECT name FROM users WHERE id = ?;";
     public static String SELECT_ID_FROM_ROW_NR = "SELECT id FROM users LIMIT ?,1;";
-    public static String CREATE_DATABASE_IF_NOT_EXIST = "CREATE DATABASE IF NOT EXISTS workshop;";
+    public static String CREATE_DATABASE_IF_NOT_EXIST =
+            "CREATE DATABASE IF NOT EXISTS workshop CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;";
     public static String CREATE_TABLE_IF_NOT_EXISTS =
             "CREATE TABLE IF NOT EXISTS users (id int auto_increment UNIQUE, name VARCHAR(100), password VARCHAR(60), email VARCHAR(50) UNIQUE, PRIMARY KEY (id));";
     public static String RETRIEVE_PASSWORD = "SELECT password FROM users WHERE id = ?;";
     public static String DROP_TABLE = "DROP TABLE users;";
-
 
     public void delete_table(){
         try (Connection connect = DBUtil.connect()) {
@@ -24,7 +24,6 @@ public class UserDao {
             e.printStackTrace();
         }
     }
-
     public void add(String name, String password, String email) {
 
         try (Connection connect = DBUtil.connect()) {
@@ -43,7 +42,6 @@ public class UserDao {
             e.printStackTrace();
         }
     }
-
     static void createDBIfNotExist() {
         try (Connection connect = DBUtil.connect()) {
             DBUtil.createDBIfNotExist(connect, CREATE_DATABASE_IF_NOT_EXIST);
